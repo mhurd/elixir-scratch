@@ -1,6 +1,42 @@
+## Lists and Recursion
+# 
+# defmodule MyList do
+#     defp _mapsum([], _f, n), do: n
+#     defp _mapsum([head|tail], f, n), do: _mapsum(tail, f, f.(head) + n)
+#     def mapsum(l, f), do: _mapsum(l, f, 0)
+# 
+#     defp _max([], currentMax), do: currentMax
+#     defp _max([head | tail], currentMax) when head > currentMax, do: _max(tail, head)  
+#     defp _max([_head | tail], currentMax), do: _max(tail, currentMax)
+#     def max([head|tail]), do: _max(tail, head)
+# 
+#     def caesar([], _offset), do: []
+#     def caesar([head|tail], offset), do: [head+offset|caesar(tail, offset)]
+# end
+# 
+# IO.puts "maxsum result is #{MyList.mapsum([1,2,3], &(&1*&1))}"
+# 
+# IO.puts "Max value in list is #{MyList.max([3,65,3,5,7])}"
+# 
+# IO.puts "caesar-ed 'Mike Hurd' is #{MyList.caesar('Mike Hurd', 1)}"
 
+## Reduce
+# 
+# defmodule MyList do
+#     def reduceLeft([], _f, n), do: n
+#     def reduceLeft([head | tail], f, n), do: reduceLeft(tail, f, f.(head, n))
+# end
+# 
+# IO.puts "Reduced value in list is #{MyList.reduceLeft([2,4,6], &(&1 + &2), 0)}"
 
-
+## Head & Tail
+#
+# defmodule MyList do
+#     def map([], _f), do: []
+#     def map([head | tail], f), do: [f.(head) | map(tail, f)]
+# end
+# 
+# IO.inspect MyList.map([1,2,3], &(&1*2))
 
 ## Matching Functions 
 #
@@ -30,8 +66,6 @@
 # y = 456
 # IO.puts "Greatest Common Divisor of #{x} & #{y} is #{GCD.of(x, y)}"
 
-
-
 ## Modules 
 #
 # defmodule Times do 
@@ -44,7 +78,6 @@
 # IO.inspect Times.triple(5)
 # IO.inspect Times.quadruple(5)
 
-
 ## Annonymous function syntax sugar 
 #
 # IO.inspect Enum.map [1,2,3,4], &{&1+2}
@@ -52,7 +85,6 @@
 # 
 # divrem = &{div(&1, &2), rem(&1, &2)}
 # IO.inspect divrem.(13, 5)
-
 
 ## Returning Functions 
 #
