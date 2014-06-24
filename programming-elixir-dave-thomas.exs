@@ -1,3 +1,13 @@
+## Dictionaries, Maps, HashDicts, Keyword, Sets & Structs
+# 
+# Sum a HashDict ​ ​ 
+
+defmodule Sum do
+    def values(dict), do: dict |> Dict.values |> Enum.sum
+end
+hd = [ one: 1, two: 2, three: 3, four: 4, five: 5 ] |> Enum.into HashDict.new 
+IO.puts Sum.values(hd)
+
 ## Lists and Recursion
 # 
 # defmodule MyList do
@@ -12,6 +22,8 @@
 # 
 #     def caesar([], _offset), do: []
 #     def caesar([head|tail], offset), do: [head+offset|caesar(tail, offset)]
+# 
+#     def span(from, to), do: Enum.drop(1..to, from-1)
 # end
 # 
 # IO.puts "maxsum result is #{MyList.mapsum([1,2,3], &(&1*&1))}"
@@ -19,6 +31,9 @@
 # IO.puts "Max value in list is #{MyList.max([3,65,3,5,7])}"
 # 
 # IO.puts "caesar-ed 'Mike Hurd' is #{MyList.caesar('Mike Hurd', 1)}"
+# 
+# IO.puts "span from 3 to 7 is"
+# IO.inspect MyList.span(3, 7)
 
 ## Reduce
 # 
