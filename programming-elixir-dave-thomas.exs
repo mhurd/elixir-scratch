@@ -1,12 +1,12 @@
 ## Dictionaries, Maps, HashDicts, Keyword, Sets & Structs
-# 
-# Sum a HashDict ​ ​ 
-
-defmodule Sum do
-    def values(dict), do: dict |> Dict.values |> Enum.sum
-end
-hd = [ one: 1, two: 2, three: 3, four: 4, five: 5 ] |> Enum.into HashDict.new 
-IO.puts Sum.values(hd)
+## 
+## Sum a HashDict ​ ​ 
+#
+# defmodule Sum do
+#     def values(dict), do: dict |> Dict.values |> Enum.sum
+# end
+# hd = [ one: 1, two: 2, three: 3, four: 4, five: 5 ] |> Enum.into HashDict.new 
+# IO.puts Sum.values(hd)
 
 ## Lists and Recursion
 # 
