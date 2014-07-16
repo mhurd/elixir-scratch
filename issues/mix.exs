@@ -12,7 +12,7 @@ defmodule Issues.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: []]
+    [applications: [], mod: {Issues.CLI, ["elixir-lang", "elixir"]}]
   end
 
   # Dependencies can be hex.pm packages:
